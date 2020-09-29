@@ -98,6 +98,16 @@ public class Shuffler {
     }
   }
 
+  public void shuffle(Object[] data) {
+    for (int i = data.length - 1; i > 0; i--)  {
+      int j = rng.nextInt(i + 1);
+      if (i != j) {
+        var temp = data[i];
+        data[i] = data[j];
+        data[j] = temp;
+      }
+    }
+  }
 
 
 }
